@@ -1,0 +1,267 @@
+/* Tainacan Gutenberg Blocks colors */
+:root {
+  --tainacan-block-primary: var(--paletteColor1, #3d61bf);
+}
+
+/* Remaining imports */
+/* Wide alignments to Tainacan lists */
+.tainacan-items-archive-page .btContentHolder {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 12px 0 !important;
+}
+
+.tainacan-items-archive-page .btContentHolder .btContent {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+}
+
+.tainacan-items-archive-page .btContentHolder .btSidebar {
+  display: none !important;
+}
+
+.tainacan-items-archive-page .btContentWrap .btPageHeadline.bt_bb_section::before {
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  content: ' ';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.tainacan-items-archive-page .btContentWrap .btPageHeadline {
+  background-image: url("../assets/images/banner.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: inherit !important;
+}
+
+/* Tainacan Items list customization */
+.theme-items-list,
+.tainacan-modal {
+  --tainacan-secondary: #3d61bf;
+  --tainacan-primary: #dde6fd;
+  --tainacan-font-family: "Niramit",Arial,Helvetica,sans-serif;
+}
+
+.tainacan-modal .filter-item-forms .collapse input.input,
+.tainacan-modal .filter-item-forms .collapse .input,
+.tainacan-modal .filter-item-forms .collapse textarea.textarea,
+.tainacan-modal .filter-item-forms .collapse .textarea,
+.tainacan-modal .filter-item-forms .collapse input[type="color"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="date"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="datetime-local"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="datetime"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="email"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="number"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="month"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="password"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="search"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="tel"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="text"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="time"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="url"].input,
+.tainacan-modal .filter-item-forms .collapse input[type="week"].input,
+.tainacan-modal .filter-item-forms .collapse .select,
+.tainacan-modal .filter-item-forms .collapse select,
+.tainacan-modal .filter-item-forms .collapse .dropdown-trigger > .button,
+.theme-items-list .search-control .search-control-item input.input,
+.theme-items-list .search-control .search-control-item .input,
+.theme-items-list .search-control .search-control-item textarea.textarea,
+.theme-items-list .search-control .search-control-item .textarea,
+.theme-items-list .search-control .search-control-item input[type="color"].input,
+.theme-items-list .search-control .search-control-item input[type="date"].input,
+.theme-items-list .search-control .search-control-item input[type="datetime-local"].input,
+.theme-items-list .search-control .search-control-item input[type="datetime"].input,
+.theme-items-list .search-control .search-control-item input[type="email"].input,
+.theme-items-list .search-control .search-control-item input[type="number"].input,
+.theme-items-list .search-control .search-control-item input[type="month"].input,
+.theme-items-list .search-control .search-control-item input[type="password"].input,
+.theme-items-list .search-control .search-control-item input[type="search"].input,
+.theme-items-list .search-control .search-control-item input[type="tel"].input,
+.theme-items-list .search-control .search-control-item input[type="text"].input,
+.theme-items-list .search-control .search-control-item input[type="time"].input,
+.theme-items-list .search-control .search-control-item input[type="url"].input,
+.theme-items-list .search-control .search-control-item input[type="week"].input,
+.theme-items-list .search-control .search-control-item .select,
+.theme-items-list .search-control .search-control-item select,
+.theme-items-list .search-control .search-control-item .dropdown-trigger > .button {
+  border-radius: 36px !important;
+  line-height: 1.5 !important;
+}
+
+.tainacan-modal .dropdown-menu,
+.theme-items-list .dropdown-menu {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.12) !important;
+  border-radius: 2px !important;
+}
+
+.tainacan-modal .dropdown-menu::before,
+.theme-items-list .dropdown-menu::before {
+  content: "";
+  display: block;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid #fff;
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  margin-left: -33px;
+  margin-top: -9px;
+  opacity: 0;
+  -webkit-transition: 200ms ease all;
+  -moz-transition: 200ms ease all;
+  transition: 200ms ease all;
+  pointer-events: none;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition-delay: 0;
+  -moz-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.tainacan-modal .dropdown-menu .dropdown-content,
+.theme-items-list .dropdown-menu .dropdown-content {
+  border: none !important;
+}
+
+.tainacan-modal .tainacan-form .form-submit .button.is-success,
+.theme-items-list .tainacan-form .form-submit .button.is-success,
+.tainacan-modal .tainacan-form .form-submit .button.is-outlined,
+.theme-items-list .tainacan-form .form-submit .button.is-outlined {
+  padding: 1.2142857em 1.42857142em !important;
+  font-weight: bold !important;
+  border-radius: 30px !important;
+}
+
+.tainacan-modal:not(#filters-modal) .modal-background {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.tainacan-modal:not(#filters-modal) .tainacan-modal-content,
+.tainacan-modal:not(#filters-modal) .modal-card {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.12) !important;
+  border-radius: 24px !important;
+}
+
+.tainacan-modal .b-numberinput.is-grouped .control input.input {
+  border-radius: 0px !important;
+}
+
+.tainacan-modal .date-filter-container > .dropdown .dropdown-trigger > .button,
+.tainacan-modal .numeric-filter-container > .dropdown .dropdown-trigger > .button {
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.tainacan-modal .date-filter-container > .datepicker .dropdown .dropdown-trigger input {
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+
+#filter-menu-compress-button .icon {
+  top: -2px !important;
+  position: relative;
+}
+
+.theme-items-list .tainacan-records-container .tainacan-record .media .list-metadata .metadata-label::after {
+  display: block !important;
+}
+
+.tainacan-items-archive-page .btSiteFooter {
+  display: none;
+}
+
+.tainacan-items-single-page {
+  --tainacan-secondary: #3d61bf;
+  --tainacan-primary: #dde6fd;
+  --tainacan-font-family: "Niramit",Arial,Helvetica,sans-serif;
+}
+
+.tainacan-items-single-page .btContentWrap .btPageHeadline.bt_bb_section::before {
+  background-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.tainacan-items-single-page .btContentWrap .btPageHeadline {
+  background-image: url("../assets/images/banner.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: inherit !important;
+}
+
+.tainacan-items-single-page .bt_bb_size_large.bt_bb_headline h1 {
+  font-size: 3.0em;
+}
+
+.tainacan-item-breadcrumb {
+  position: absolute;
+  top: 14.25em;
+  margin-left: 4em;
+  z-index: 9;
+}
+
+.tainacan-item-breadcrumb .btBreadCrumbs {
+  font-size: 1.125em;
+}
+
+h2.tainacan-single-item-section {
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+h3.tainacan-metadata-label {
+  font-size: 1.125em;
+}
+
+.tainacan-relationship-metadatum-header h4.label {
+  font-size: 1em;
+}
+
+.tainacan-metadatum h5.label {
+  font-size: 0.875em;
+  margin-top: 0.25em;
+}
+
+.tainacan-metadata-value {
+  margin-bottom: 1.5em;
+}
+
+.hierarchy-separator,
+.multivalue-separator {
+  opacity: 0.6;
+}
+
+.tainacan-item-section__metadata {
+  column-width: 480px;
+}
+
+.tainacan-item-section__metadata p:empty {
+  display: none;
+  margin: none;
+}
+
+.tainacan-item-section__metadata > * {
+  break-inside: avoid;
+}
+
+.tainacan-media-component {
+  --swiper-theme-color: #3d61bf;
+  --swiper-navigation-color: #3d61bf;
+}
+
+.tainacan-items-single-page .btSiteFooter {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

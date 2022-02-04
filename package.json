@@ -1,0 +1,23 @@
+{
+  "name": "tainacan-evently",
+  "version": "0.0.1",
+  "description": "Plugin to make Tainacan special pages compatible with the Evently theme",
+  "main": "index.js",
+  "scripts": {
+    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 sass/style.scss style.css",
+    "css-minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output style.min.css style.css",
+    "build": "npm run compile-styles && npm run css-minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateuswetah/tainacan-evently.git"
+  },
+  "author": "mateuswetah",
+  "license": "ISC",
+  "homepage": "https://github.com/mateuswetah/tainacan-evently#readme",
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {}
+}

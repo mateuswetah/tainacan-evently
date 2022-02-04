@@ -1,0 +1,76 @@
+// Single Items page
+.tainacan-items-single-page {
+    --tainacan-secondary: #3d61bf;
+    --tainacan-primary: #dde6fd;
+    --tainacan-font-family: "Niramit",Arial,Helvetica,sans-serif;
+}
+
+
+.tainacan-items-single-page .btContentWrap .btPageHeadline.bt_bb_section::before {
+    background-color: rgba(255,255,255,.45) !important;
+}
+.tainacan-items-single-page .btContentWrap .btPageHeadline {
+    background-image: url('../assets/images/banner.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: inherit !important;
+}
+
+.tainacan-items-single-page .bt_bb_size_large.bt_bb_headline h1 {
+    font-size: 3.0em;
+}
+
+.tainacan-item-breadcrumb {
+    position: absolute;
+    top: 14.25em;
+    margin-left: 4em;
+    z-index: 9;
+}
+.tainacan-item-breadcrumb .btBreadCrumbs {
+    font-size: 1.125em;
+}
+
+h2.tainacan-single-item-section {
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+}
+h3.tainacan-metadata-label {
+    font-size: 1.125em;
+}
+.tainacan-relationship-metadatum-header h4.label {
+    font-size: 1em;
+}
+.tainacan-metadatum h5.label {
+    font-size: 0.875em;
+    margin-top: 0.25em;
+}
+.tainacan-metadata-value {
+    margin-bottom: 1.5em;
+}
+
+.hierarchy-separator,
+.multivalue-separator {
+    opacity: 0.6;
+}
+
+.tainacan-item-section__metadata {
+    column-width: 480px;
+
+    & p:empty {
+        display: none;
+        margin: none;
+    }
+    &>* {
+        break-inside: avoid;
+    }
+}
+
+// Tainacan Media Component (attachments gallery)
+.tainacan-media-component {
+    --swiper-theme-color: #3d61bf;
+    --swiper-navigation-color: #3d61bf;
+}
+
+.tainacan-items-single-page .btSiteFooter {
+    display: none;
+}
