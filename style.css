@@ -15,6 +15,8 @@
   --tainacan-warning: #ffefbc;
   --tainacan-success: #3c5102;
   --tainacan-input-color: #191919;
+  --tainacan-item-hover-background-color: #f9f9f9;
+  --tainacan-item-heading-hover-background-color: #f2f2f2;
   --tainacan-font-family: Montserrat,sans-serif;
   --tainacan-base-font-size: 1.125em;
 }
@@ -81,7 +83,7 @@
 .tainacan-modal #filters-modal .modal-content h3,
 .theme-items-list #filters-modal .modal-content h3,
 .theme-items-list #filters-modal .modal-content h3 {
-  font-size: 1.125em;
+  font-size: 1.25em;
   position: relative;
 }
 
@@ -91,7 +93,7 @@
 .theme-items-list #filters-modal .modal-content h3:after {
   height: 2px;
   background: #3c5102;
-  width: 30%;
+  width: 25%;
   content: '';
   position: absolute;
   bottom: -0.125em;
@@ -259,84 +261,115 @@
 }
 
 .tainacan-items-single-page {
-  --tainacan-secondary: #3d61bf;
-  --tainacan-primary: #dde6fd;
-  --tainacan-font-family: "Niramit",Arial,Helvetica,sans-serif;
+  --tainacan-secondary: #eb4200;
+  --tainacan-primary: #ffefbc;
+  --tainacan-font-family: Montserrat,sans-serif;
 }
 
-.tainacan-items-single-page .btContentWrap .btPageHeadline.bt_bb_section::before {
-  background-color: rgba(255, 255, 255, 0.45) !important;
+.tainacan-items-single-page .vc_separator {
+  height: 2px;
+  width: 20%;
+  background-color: #eb4200;
+  margin: 25px 0 2em;
 }
 
-.tainacan-items-single-page .btContentWrap .btPageHeadline {
-  background-image: url("../assets/images/banner.jpg") !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-attachment: inherit !important;
+.tainacan-items-single-page hr {
+  height: 1px;
+  border-top: 1px solid #ebebeb;
+  color: transparent;
 }
 
-.tainacan-items-single-page .bt_bb_size_large.bt_bb_headline h1 {
-  font-size: 3.0em;
+.tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content {
+  box-shadow: none;
 }
 
-.tainacan-item-breadcrumb {
-  position: absolute;
-  top: 14.25em;
-  margin-left: 4em;
-  z-index: 9;
+.tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns {
+  padding: 0;
+  display: flex;
 }
 
-.tainacan-item-breadcrumb .btBreadCrumbs {
-  font-size: 1.125em;
+.tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-1 {
+  flex-basis: 55%;
+  max-width: 55%;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 
-h2.tainacan-single-item-section {
+.tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-2 {
+  flex-basis: 45%;
+  max-width: 45%;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns {
+    flex-wrap: wrap;
+  }
+  .tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-1,
+  .tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-2 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.tainacan-items-single-page h1,
+.tainacan-items-single-page h2,
+.tainacan-items-single-page h3,
+.tainacan-items-single-page h4,
+.tainacan-items-single-page h5,
+.tainacan-items-single-page h6 {
+  line-height: normal;
+}
+
+.tainacan-items-single-page h2.tainacan-single-item-section {
   font-size: 1.25em;
   margin-bottom: 0.5em;
 }
 
-h3.tainacan-metadata-label {
+.tainacan-items-single-page h3.tainacan-metadata-label {
   font-size: 1.125em;
+  margin-bottom: 0.5em;
 }
 
-.tainacan-relationship-metadatum-header h4.label {
+.tainacan-items-single-page .tainacan-compound-metadatum h4.label,
+.tainacan-items-single-page .tainacan-relationship-metadatum-header h4.label {
   font-size: 1em;
+  margin-bottom: 0.35em;
 }
 
-.tainacan-metadatum h5.label {
+.tainacan-items-single-page .tainacan-metadatum h5.label {
   font-size: 0.875em;
-  margin-top: 0.25em;
+  margin-top: 0.35em;
+  margin-bottom: 0.25em;
 }
 
-.tainacan-metadata-value {
+.tainacan-items-single-page .tainacan-metadata-value {
   margin-bottom: 1.5em;
 }
 
-.hierarchy-separator,
-.multivalue-separator {
+.tainacan-items-single-page .hierarchy-separator,
+.tainacan-items-single-page .multivalue-separator {
   opacity: 0.6;
 }
 
-.tainacan-item-section__metadata {
+.tainacan-items-single-page .tainacan-item-section__metadata {
   column-width: 480px;
 }
 
-.tainacan-item-section__metadata p:empty {
+.tainacan-items-single-page .tainacan-item-section__metadata p:empty {
   display: none;
   margin: none;
 }
 
-.tainacan-item-section__metadata > * {
+.tainacan-items-single-page .tainacan-item-section__metadata > * {
   break-inside: avoid;
 }
 
-.tainacan-media-component {
-  --swiper-theme-color: #3d61bf;
-  --swiper-navigation-color: #3d61bf;
-}
-
-.tainacan-items-single-page .btSiteFooter {
-  display: none;
+.tainacan-items-single-page .tainacan-media-component {
+  --swiper-theme-color: #eb4200;
+  --swiper-navigation-color: #eb4200;
+  --tainacan-media-thumbs-carousel-item-size: 75px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,7 +17,7 @@
 												<img src="<?php echo get_the_post_thumbnail_url( tainacan_get_collection_id() ); ?>" alt="<?php echo esc_attr($alt); ?>">
 											<?php endif; ?>
 											<div class="wpb_wrapper">
-											<h6 class="mkdf-st-tagline" style="margin-bottom: 0;"><?php _e('Collection', 'tainacan-evently'); ?></h6>
+												<h6 class="mkdf-st-tagline" style="margin-bottom: 0;"><a href=""><?php _e('Collections', 'tainacan-evently'); ?></a></h6>
 												<h2 style="margin-top: 0;"><?php tainacan_the_collection_name(); ?></h2>
 												<div class="vc_separator"></div>
 											</div>

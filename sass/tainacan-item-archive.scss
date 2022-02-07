@@ -8,6 +8,8 @@
     --tainacan-warning: #ffefbc;
     --tainacan-success: #3c5102;
     --tainacan-input-color: #191919;
+    --tainacan-item-hover-background-color: #f9f9f9;
+    --tainacan-item-heading-hover-background-color: #f2f2f2;
     --tainacan-font-family: Montserrat,sans-serif;
     --tainacan-base-font-size: 1.125em;
 }
@@ -59,13 +61,13 @@
 
     #filters-modal .modal-content h3,
     #filters-modal .modal-content h3 {
-        font-size: 1.125em;
+        font-size: 1.25em;
         position: relative;
 
         &:after {
             height: 2px;
             background: #3c5102;
-            width: 30%;
+            width: 25%;
             content: '';
             position: absolute;
             bottom: -0.125em;

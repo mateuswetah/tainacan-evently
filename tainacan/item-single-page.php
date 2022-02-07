@@ -1,58 +1,46 @@
 <?php get_header(); ?>
 
-<article class="btPostSingleItemStandard gutter noPhoto post-<?php echo get_the_ID() ?> post type-post format-standard has-post-thumbnail hentry">
-    <div class="entry-content">
-        <div class="port">
-            <div class="tainacan-item-breadcrumb bt_bb_headline_superheadline_outside">
-                <span class="bt_bb_headline_superheadline">
-                    <span class="btBreadCrumbs">
-                        <span>
-                            <a href="<?php echo get_home_url() ?>">Home</a>
-                        </span>
-                        <span>
-                            <a href="<?php echo tainacan_get_source_item_list_url(); ?>">Acervo</a>
-                        </span>
-                    </span>
-                </span>
-            </div> 
-            <div class="btPostContentHolder">
-                <div class="btArticleContent">
-                    <div class="bt_bb_wrapper">
-                        <?php
-                            include(TAINACAN_EVENTLY_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-attachments.php' );
-                            do_action( 'tainacan-evently-single-item-after-attachments' );
-                        ?>
-                        <br>
-                        <hr>
-                        <br>
-                        <?php
-                            include(TAINACAN_EVENTLY_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-metadata.php' );
-                            do_action( 'tainacan-evently-single-item-after-metadata' );
-                        ?>
-                    </div>
-                    <br>
-                    <br>
-                </div>
-                <div class="btArticleShareEtc">
-                    <div class="btShareColumn">
-                        <div class="bt_bb_icon btIcoFacebook bt_bb_style_filled bt_bb_size_xsmall bt_bb_shape_circle">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_the_permalink() ?>" target="_self" title="Share on Facebook" data-ico-fa="" class="bt_bb_icon_holder"></a>
+<div class="mkdf-container">         
+    <div class="mkdf-container-inner clearfix">
+        <div class="mkdf-grid-row  mkdf-grid-large-gutter">
+	        <div class="mkdf-page-content-holder mkdf-grid-col-12">
+		        <div class="mkdf-blog-holder mkdf-blog-single mkdf-blog-single-standard">
+			        <article id="post-<?php echo get_the_ID()?>" class="post-<?php echo get_the_ID() ?> tnc_col_11527_item type-tnc_col_11527_item status-publish format-standard has-post-thumbnail hentry">
+                        <div class="mkdf-post-content">
+                            <div class="mkdf-post-text">
+                                <div class="mkdf-post-text-inner tainacan-single-item--columns">
+                                    <div class="tainacan-single-item--column-1">
+                                        <div class="wpb_wrapper">
+                                            <h6 class="mkdf-st-tagline" style="margin-bottom: 0;">
+                                                <a href="<?php echo tainacan_get_source_item_list_url(); ?>">
+                                                    <?php tainacan_the_collection_name(); ?>
+                                                </a>
+                                            </h6>
+                                            <h1 itemprop="name" class="entry-title mkdf-post-title"><?php echo single_post_title(); ?></h1>
+                                            <div class="vc_separator"></div>
+                                        </div>
+                                        <?php
+                                            include(TAINACAN_EVENTLY_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-metadata.php' );
+                                            do_action( 'tainacan-evently-single-item-after-metadata' );
+                                        ?>
+                                    </div>
+                                    <div class="tainacan-single-item--column-2">
+                                        <?php
+                                            include(TAINACAN_EVENTLY_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-attachments.php' );
+                                            do_action( 'tainacan-evently-single-item-after-attachments' );
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bt_bb_icon btIcoTwitter bt_bb_style_filled bt_bb_size_xsmall bt_bb_shape_circle">
-                            <a href="https://twitter.com/intent/tweet?text=<?php echo get_the_permalink() ?>" target="_self" title="Share on Twitter" data-ico-fa="" class="bt_bb_icon_holder"></a>
-                        </div>
-                        <div class="bt_bb_icon btIcoLinkedin bt_bb_style_filled bt_bb_size_xsmall bt_bb_shape_circle">
-                            <a href="https://www.linkedin.com/shareArticle?url=<?php echo get_the_permalink() ?>" target="_self" title="Share on Linkedin" data-ico-fa="" class="bt_bb_icon_holder"></a>
-                        </div>
-                        <div class="bt_bb_icon btIcoWhatsApp bt_bb_style_filled bt_bb_size_xsmall bt_bb_shape_circle">
-                            <a href="https://api.whatsapp.com/send?text=<?php echo get_the_permalink() ?>" target="_self" title="Share on WhatsApp" data-ico-fa="" class="bt_bb_icon_holder"></a>
-                        </div>
-                    </div><!-- /btShareColumn -->
+                    </article>
                 </div>
             </div>
         </div>
     </div>
-</article>
+</div>
+
+
 
 <?php tainacan_evently_item_navigation(); ?>
 
