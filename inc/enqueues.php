@@ -22,5 +22,3 @@ function tainacan_evently_enqueue_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tainacan_evently_enqueue_scripts' );
-
-?>

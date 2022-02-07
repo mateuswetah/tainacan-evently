@@ -12,7 +12,10 @@
                                     <div class="tainacan-single-item--column-1">
                                         <div class="wpb_wrapper">
                                             <h6 class="mkdf-st-tagline" style="margin-bottom: 0;">
-                                                <a href="<?php echo tainacan_get_source_item_list_url(); ?>">
+                                                <a href="<?php echo get_post_type_archive_link('tainacan-collection'); ?>">
+                                                    <?php _e('Collections', 'tainacan-evently'); ?>
+                                                </a>,
+                                                <a href="<?php echo tainacan_get_source_item_list_url_evently(); ?>">
                                                     <?php tainacan_the_collection_name(); ?>
                                                 </a>
                                             </h6>
@@ -28,6 +31,11 @@
                                         <?php
                                             include(TAINACAN_EVENTLY_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-attachments.php' );
                                             do_action( 'tainacan-evently-single-item-after-attachments' );
+                                        ?>
+                                        <hr>
+                                        <?php
+                                            include(TAINACAN_EVENTLY_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-items-related-to-this.php' );
+                                            do_action( 'tainacan-evently-single-item-after-items-related-to-this' );
                                         ?>
                                     </div>
                                 </div>

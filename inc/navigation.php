@@ -133,7 +133,7 @@ if ( !function_exists('tainacan_evently_item_navigation') ) {
 				</div>
 			</section>
 			<?php endif; ?>
-		<?
+		<?php
 	}
 }
 
@@ -141,7 +141,7 @@ if ( !function_exists('tainacan_evently_item_navigation') ) {
 /**
  * Retrieves the current items list source link
  */
-function tainacan_get_source_item_list_url() {
+function tainacan_get_source_item_list_url_evently() {
 	$args = $_GET;
 	if (isset($args['ref'])) {
 		$ref = $_GET['ref'];
@@ -156,4 +156,3 @@ function tainacan_get_source_item_list_url() {
 		return tainacan_the_collection_url() . '?' . http_build_query(array_merge($args));
 	}
 }
-?>

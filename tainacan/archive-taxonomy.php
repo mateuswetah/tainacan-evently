@@ -27,7 +27,9 @@ $src = wp_get_attachment_image_src($image, 'full');
 												<img class="page-header-image" src="<?php echo $src[0]; ?>" alt="<?php tainacan_the_term_name(); ?>">
 											<?php endif; ?>
 											<div class="wpb_wrapper">
-												<h6 class="mkdf-st-tagline" style="margin-bottom: 0;"><?php echo $current_taxonomy->labels->name; ?></h6>
+												<h6 class="mkdf-st-tagline" style="margin-bottom: 0;">
+													<?php echo $current_taxonomy->labels->name; ?>
+												</h6>
 												<h1 style="margin-top: 0;"><?php tainacan_the_term_name(); ?></h1>
 												<div class="vc_separator"></div>
 											</div>

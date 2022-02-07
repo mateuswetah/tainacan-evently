@@ -305,11 +305,19 @@
   flex-shrink: 0;
 }
 
+.tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-1 section {
+  padding-right: 2em;
+}
+
 .tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-2 {
   flex-basis: 45%;
   max-width: 45%;
   flex-grow: 1;
   flex-shrink: 0;
+}
+
+.tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-2 section {
+  padding-left: 2em;
 }
 
 @media screen and (max-width: 1024px) {
@@ -320,6 +328,11 @@
   .tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-2 {
     flex-basis: 100%;
     max-width: 100%;
+  }
+  .tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-1 section,
+  .tainacan-items-single-page .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-content .tainacan-single-item--columns .tainacan-single-item--column-2 section {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -332,12 +345,12 @@
   line-height: normal;
 }
 
-.tainacan-items-single-page h2.tainacan-single-item-section {
+.tainacan-items-single-page h2 {
   font-size: 1.25em;
   margin-bottom: 0.5em;
 }
 
-.tainacan-items-single-page h3.tainacan-metadata-label {
+.tainacan-items-single-page h3 {
   font-size: 1.125em;
   margin-bottom: 0.5em;
 }
@@ -474,6 +487,30 @@
   --swiper-theme-color: #eb4200;
   --swiper-navigation-color: #eb4200;
   --tainacan-media-thumbs-carousel-item-size: 75px;
+}
+
+.tainacan-items-single-page .tainacan-single-item-section {
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.tainacan-items-single-page .tainacan-single-item-section:after {
+  height: 2px;
+  background: #3c5102;
+  width: 25%;
+  content: '';
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+}
+
+.tainacan-items-single-page .tainacan-item-section--items-related-to-this .wp-block-tainacan-dynamic-items-list {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.tainacan-items-single-page .tainacan-item-section--items-related-to-this .wp-block-spacer {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

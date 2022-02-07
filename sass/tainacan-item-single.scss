@@ -27,12 +27,20 @@
                 max-width: 55%;
                 flex-grow: 1;
                 flex-shrink: 0;
+                
+                section {
+                    padding-right: 2em;
+                }
             }
             .tainacan-single-item--column-2 {
                 flex-basis: 45%;
                 max-width: 45%;
                 flex-grow: 1;
                 flex-shrink: 0;
+
+                section {
+                    padding-left: 2em;
+                }
             }
 
             @media screen and (max-width: 1024px) {
@@ -42,6 +50,11 @@
                 .tainacan-single-item--column-2 {
                     flex-basis: 100%;
                     max-width: 100%;
+                    
+                    section {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
                 }
             }
         }
@@ -54,11 +67,11 @@
     h6 {
         line-height: normal;
     }
-    h2.tainacan-single-item-section {
+    h2 {
         font-size: 1.25em;
         margin-bottom: 0.5em;
     }
-    h3.tainacan-metadata-label {
+    h3 {
         font-size: 1.125em;
         margin-bottom: 0.5em;
     }
@@ -166,7 +179,6 @@
     .multivalue-separator {
         opacity: 0.6;
     }
-
     .tainacan-item-section__metadata {
         column-width: 480px;
 
@@ -178,11 +190,33 @@
             break-inside: avoid;
         }
     }
-
     // Tainacan Media Component (attachments gallery)
     .tainacan-media-component {
         --swiper-theme-color: #eb4200;
         --swiper-navigation-color: #eb4200;
         --tainacan-media-thumbs-carousel-item-size: 75px;
+    }
+    .tainacan-single-item-section {
+        position: relative;
+        margin-bottom: 1.5em;
+        
+        &:after {
+            height: 2px;
+            background: #3c5102;
+            width: 25%;
+            content: '';
+            position: absolute;
+            bottom: -0.5em;
+            left: 0;
+        }
+    }
+    .tainacan-item-section--items-related-to-this {
+        .wp-block-tainacan-dynamic-items-list {
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+        }
+        .wp-block-spacer {
+           display: none;
+        }
     }
 }
