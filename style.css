@@ -62,6 +62,7 @@
 .tainacan-modal,
 .theme-items-list {
   /* View Modes */
+  /* Pagination */
 }
 
 .tainacan-modal h1,
@@ -260,6 +261,15 @@
   box-sizing: border-box;
 }
 
+.tainacan-modal .pagination-area .pagination .pagination-link,
+.tainacan-modal .pagination-area .pagination .pagination-previous,
+.tainacan-modal .pagination-area .pagination .pagination-next,
+.theme-items-list .pagination-area .pagination .pagination-link,
+.theme-items-list .pagination-area .pagination .pagination-previous,
+.theme-items-list .pagination-area .pagination .pagination-next {
+  align-items: baseline !important;
+}
+
 .tainacan-items-single-page {
   --tainacan-secondary: #eb4200;
   --tainacan-primary: #ffefbc;
@@ -332,10 +342,16 @@
   margin-bottom: 0.5em;
 }
 
+.tainacan-items-single-page .tainacan-item-section__metadata a {
+  font-family: "Libre Baskerville",serif;
+  font-style: italic;
+}
+
 .tainacan-items-single-page .tainacan-compound-metadatum h4.label,
 .tainacan-items-single-page .tainacan-relationship-metadatum-header h4.label {
   font-size: 1em;
   margin-bottom: 0.35em;
+  font-weight: bold;
 }
 
 .tainacan-items-single-page .tainacan-metadatum h5.label {
@@ -346,6 +362,94 @@
 
 .tainacan-items-single-page .tainacan-metadata-value {
   margin-bottom: 1.5em;
+}
+
+.tainacan-items-single-page .multivalue-separator {
+  color: #cbcbcb;
+  margin: 0 8px;
+}
+
+.tainacan-items-single-page .hierarchy-separator {
+  color: #cbcbcb;
+}
+
+.tainacan-items-single-page .metadata-type-compound .multivalue-separator,
+.tainacan-items-single-page .metadata-type-textarea .multivalue-separator {
+  display: block;
+  max-height: 1px;
+  width: 45%;
+  background: #e0e5eb;
+  content: none;
+  color: transparent;
+  margin: 0.875rem auto;
+}
+
+.tainacan-items-single-page .tainacan-compound-group {
+  padding-top: 0.5em;
+  padding-left: 1.5rem;
+  border-left: 1px solid #e0e5eb;
+}
+
+.tainacan-items-single-page .tainacan-compound-group .label {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+.tainacan-items-single-page .tainacan-compound-group p {
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+.tainacan-items-single-page .tainacan-compound-group > .multivalue-separator {
+  margin: 1em auto 1.5em -1.5em;
+}
+
+.tainacan-items-single-page .tainacan-relationship-group .tainacan-relationship-metadatum .tainacan-relationship-metadatum-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.tainacan-items-single-page .tainacan-relationship-group .tainacan-relationship-metadatum .tainacan-relationship-metadatum-header img {
+  margin-right: 12px;
+  max-width: 28px;
+  max-height: 28px;
+}
+
+.tainacan-items-single-page .tainacan-relationship-group .tainacan-relationship-metadatum .tainacan-relationship-metadatum-header .label {
+  font-style: normal;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+.tainacan-items-single-page .tainacan-relationship-group .tainacan-relationship-metadatum .tainacan-metadatum {
+  margin-left: 40px;
+}
+
+.tainacan-items-single-page .tainacan-relationship-group .tainacan-relationship-metadatum .tainacan-metadatum .label {
+  font-size: 1em;
+  line-height: 1em;
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+
+.tainacan-items-single-page .tainacan-relationship-group .tainacan-relationship-metadatum .tainacan-metadatum p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tainacan-items-single-page .tainacan-relationship-group > .multivalue-separator {
+  display: block;
+  max-height: 1px;
+  width: calc(100% - 40px);
+  background: #e0e5eb;
+  content: none;
+  color: transparent;
+  margin: 0.5em 0 0.5em 40px;
 }
 
 .tainacan-items-single-page .hierarchy-separator,

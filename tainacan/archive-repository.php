@@ -12,7 +12,7 @@
 									<div class="wpb_wrapper">
 										<div class="wpb_text_column wpb_content_element ">
 											<div class="wpb_wrapper">
-												<h2><?php _e('Items', 'tainacan-evently'); ?></h2>
+												<h1><?php _e('Items', 'tainacan-evently'); ?></h1>
 												<div class="vc_separator"></div>
 											</div>
 										</div>

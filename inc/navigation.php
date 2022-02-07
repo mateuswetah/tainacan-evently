@@ -38,15 +38,15 @@ if ( !function_exists('tainacan_evently_get_adjacent_item_links') ) {
 
 		if (function_exists('tainacan_get_adjacent_items') && isset($_GET['pos'])) {
 			if ($adjacent_items['next']) {
-				$next_thumb = $adjacent_items['next']['thumbnail']['tainacan-small'][0];
+				$next_thumb = $adjacent_items['next']['thumbnail']['tainacan-medium'][0];
 			}
 			if ($adjacent_items['previous']) {
-				$previous_thumb = $adjacent_items['previous']['thumbnail']['tainacan-small'][0];
+				$previous_thumb = $adjacent_items['previous']['thumbnail']['tainacan-medium'][0];
 			}
 		} else {
 			//Get the thumnail url of the previous and next post
-			$previous_thumb = get_the_post_thumbnail_url( get_previous_post(), 'tainacan-small' );
-			$next_thumb = get_the_post_thumbnail_url( get_next_post(), 'tainacan-small' );
+			$previous_thumb = get_the_post_thumbnail_url( get_previous_post(), 'tainacan-medium' );
+			$next_thumb = get_the_post_thumbnail_url( get_next_post(), 'tainacan-medium' );
 		}
 
 		$previous_post_image_output = isset($previous_thumb) ? $previous_thumb : '';
@@ -54,27 +54,46 @@ if ( !function_exists('tainacan_evently_get_adjacent_item_links') ) {
 
 		// Creates the links
 		$previous = $previous_link_url === false ? '' : (
-			'<a 
-					class="btPrevNext btPrev"
-					href="'. $previous_link_url . '">
-				' . (!empty($previous_post_image_output) ? ('<div class="btPrevNextImage" style="background-image:url(\'' . $previous_post_image_output  .'\');"></div>') : '') . '	
-				<div class="btPrevNextItem">
-					<div class="btPrevNextDir">' . __('Anterior', 'tainacan-evently') . '</div>
-					' . (!empty( $previous_title ) ? ('<div class="btPrevNextTitle">' . $previous_title . '</div>') : '' ) . '
+			'<div class="mkdf-blog-single-prev-holder clearfix">'
+				. ( !empty($previous_post_image_output) ? '<div class="mkdf-blog-single-thumb-wrapper">
+						<a 
+								itemprop="url"		
+								class="mkdf-blog-single-nav-thumb"
+								href="'. $previous_link_url . '">
+							<img width="200" height="200" class="attachment-medium size-medium wp-post-image" src=" ' . $previous_post_image_output  . '">
+						</a>
+					</div>' : '') . 	
+				'<div class="mkdf-blog-single-nav-wrapper">
+					<a 
+							itemprop="url"		
+							class="mkdf-blog-single-nav-thumb"
+							href="'. $previous_link_url . '">
+						' . ( !empty( $previous_title ) ? $previous_title : '' ) . '
+						<span class="mkdf-blog-single-nav-date">' . __('Previous', 'tainacan-evently') . '</span>
+					</a>
 				</div>
-			</a>');
+			</div>');
 
 		$next = $next_link_url === false ? '' : (
-			'<a 
-					class="btPrevNext btNext ' . (!empty($next_post_image_output) ? 'with-image' : '') . '"
-					href="'. $next_link_url . '">
-				' . (!empty($next_post_image_output) ? ('<div class="btPrevNextImage" style="background-image:url(\'' . $next_post_image_output  .'\');"></div>') : '') . '
-				<div class="btPrevNextItem">
-					<div class="btPrevNextDir">' . __('Próximo', 'tainacan-evently') . '</div>
-					' . (!empty( $next_title ) ? ('<div class="btPrevNextTitle">' . $next_title . '</div>') : '' ) . '
-				</div>
-			</a>'
-		);
+			'<div class="mkdf-blog-single-next-holder clearfix">
+				<div class="mkdf-blog-single-nav-wrapper">
+					<a 
+							itemprop="url"		
+							class="mkdf-blog-single-nav-thumb"
+							href="'. $next_link_url . '">
+						' . ( !empty( $next_title ) ? $next_title : '' ) . '
+						<span class="mkdf-blog-single-nav-date">' . __('Next', 'tainacan-evently') . '</span>
+					</a>
+				</div>'
+				. ( !empty($next_post_image_output) ? '<div class="mkdf-blog-single-thumb-wrapper">
+						<a 
+								itemprop="url"		
+								class="mkdf-blog-single-nav-thumb"
+								href="'. $next_link_url . '">
+							<img width="200" height="200" class="attachment-medium size-medium wp-post-image" src =" ' . $next_post_image_output  . '">
+						</a>
+					</div>' : '') . '	
+			</div>');
 
 		return ['next' => $next, 'previous' => $previous];
 	}
@@ -100,19 +119,17 @@ if ( !function_exists('tainacan_evently_item_navigation') ) {
 		
 		?>
 			<?php if ($previous !== '' || $next !== '') : ?>
-			<section class="gutter btPrevNextNav">
-				<div class="port">
-					<div class="btPrevNextNav">
-					<?php
-						if ( $previous !== '' ) {
-							echo $previous;
-						}
+			<section class="mkdf-blog-single-navigation">
+				<div class="mkdf-blog-single-navigation-inner clearfix">
+				<?php
+					if ( $previous !== '' ) {
+						echo $previous;
+					}
 
-						if ( $next !== '' ) {
-							echo $next;
-						}
-					?>
-					</div>
+					if ( $next !== '' ) {
+						echo $next;
+					}
+				?>
 				</div>
 			</section>
 			<?php endif; ?>

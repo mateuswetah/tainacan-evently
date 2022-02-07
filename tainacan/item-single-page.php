@@ -32,6 +32,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
+                            <?php tainacan_evently_item_navigation(); ?>
                         </div>
                     </article>
                 </div>
@@ -39,10 +41,6 @@
         </div>
     </div>
 </div>
-
-
-
-<?php tainacan_evently_item_navigation(); ?>
 
 <?php get_footer(); ?>
 

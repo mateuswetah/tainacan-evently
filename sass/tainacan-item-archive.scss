@@ -160,4 +160,11 @@
     .metadata-menu.tainacan-form {
         box-sizing: border-box;
     }
+
+    /* Pagination */
+    .pagination-area .pagination .pagination-link,
+    .pagination-area .pagination .pagination-previous,
+    .pagination-area .pagination .pagination-next {
+        align-items: baseline !important;
+    }
 }

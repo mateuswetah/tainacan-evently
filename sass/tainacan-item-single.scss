@@ -62,10 +62,15 @@
         font-size: 1.125em;
         margin-bottom: 0.5em;
     }
+    .tainacan-item-section__metadata a {
+        font-family: "Libre Baskerville",serif;
+        font-style: italic;
+    }
     .tainacan-compound-metadatum h4.label,
     .tainacan-relationship-metadatum-header h4.label {
         font-size: 1em;
         margin-bottom: 0.35em;
+        font-weight: bold;
     }
     .tainacan-metadatum h5.label {
         font-size: 0.875em;
@@ -75,7 +80,88 @@
     .tainacan-metadata-value {
         margin-bottom: 1.5em;
     }
+    .multivalue-separator {
+        color: #cbcbcb;
+        margin: 0 8px;    
+    }
+    .hierarchy-separator {
+        color: #cbcbcb;  
+    }
+    .metadata-type-compound,
+    .metadata-type-textarea {
+        .multivalue-separator {
+            display: block;
+            max-height: 1px;
+            width: 45%;
+            background: #e0e5eb;
+            content: none;
+            color: transparent;
+            margin: 0.875rem auto;
+        }
+    }
+    .tainacan-compound-group {
+        padding-top: 0.5em;
+        padding-left: 1.5rem;
+        border-left: 1px solid #e0e5eb;
 
+        .label {
+            margin: 0;
+            padding: 0;
+            font-style: normal;
+        }
+        p {
+            margin-top: 0rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &>.multivalue-separator {
+            margin: 1em auto 1.5em -1.5em;
+        }
+    }
+    .tainacan-relationship-group {
+        .tainacan-relationship-metadatum {
+            .tainacan-relationship-metadatum-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.5em;
+                img {
+                    margin-right: 12px;
+                    max-width: 28px;
+                    max-height: 28px;
+                }
+                .label {
+                    font-style: normal;
+                    margin-top: 0;
+                    margin-left: 0;
+                    margin-bottom: 0;
+                    margin-right: 0;
+                    padding: 0;
+                }
+            }
+            .tainacan-metadatum {
+                margin-left: 40px;
+                .label {
+                    font-size: 1em;
+                    line-height: 1em;
+                    margin-top: 0px;
+                    margin-bottom: 2px;
+                }
+                p {
+                    margin-top: 0.25rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+        &>.multivalue-separator {
+            display: block;
+            max-height: 1px;
+            width: calc(100% - 40px);
+            background: #e0e5eb;
+            content: none;
+            color: transparent;
+            margin: 0.5em 0 0.5em 40px;
+        }
+    }
     .hierarchy-separator,
     .multivalue-separator {
         opacity: 0.6;
