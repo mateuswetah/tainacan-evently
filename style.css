@@ -21,7 +21,16 @@
   --tainacan-base-font-size: 1.125em;
 }
 
+/* Page top container needs some padding */
+.tainacan-items-archive-page .mkdf-content .mkdf-content-inner > .mkdf-full-width > .mkdf-full-width-inner {
+  padding-top: 40px !important;
+}
+
 /* Page header */
+.mkdf-row-grid-section.tainacan-items-list--header {
+  margin-top: 25px;
+}
+
 .mkdf-row-grid-section.tainacan-items-list--header img {
   max-width: 136px;
   float: right;

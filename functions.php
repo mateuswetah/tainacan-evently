@@ -4,7 +4,7 @@ Plugin Name: Tainacan EVENTLY
 Plugin URI: https://tainacan.org/
 Description: Suport for Tainacan plugin to the EVENTLY theme - IMPORTANT - Do not remove
 Author: wetah
-Version: 0.0.1
+Version: 0.0.2
 Text Domain: tainacan-evently
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -15,7 +15,7 @@ if (! defined('WP_DEBUG') ) {
 }
 
 /** Plugin version */
-const TAINACAN_EVENTLY_VERSION = '0.0.1';
+const TAINACAN_EVENTLY_VERSION = '0.0.2';
 
 $plugin_root_url = plugin_dir_url(__FILE__);
 define('TAINACAN_EVENTLY_PLUGIN_URL_PATH', $plugin_root_url);

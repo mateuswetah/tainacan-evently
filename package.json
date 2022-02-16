@@ -1,6 +1,6 @@
 {
   "name": "tainacan-evently",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Plugin to make Tainacan special pages compatible with the Evently theme",
   "main": "index.js",
   "scripts": {

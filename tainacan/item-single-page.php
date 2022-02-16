@@ -32,7 +32,6 @@
                                             include(TAINACAN_EVENTLY_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-attachments.php' );
                                             do_action( 'tainacan-evently-single-item-after-attachments' );
                                         ?>
-                                        <hr>
                                         <?php
                                             include(TAINACAN_EVENTLY_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-items-related-to-this.php' );
                                             do_action( 'tainacan-evently-single-item-after-items-related-to-this' );

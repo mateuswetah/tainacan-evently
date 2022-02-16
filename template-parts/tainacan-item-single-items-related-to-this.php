@@ -4,8 +4,8 @@
     $max_columns_count            = 2;
     $max_items_per_screen         = 4;
 
-    if ( function_exists('tainacan_the_related_items_carousel') && tainacan_has_related_items() ) : ?>
-    
+if ( function_exists('tainacan_the_related_items_carousel') && tainacan_has_related_items() ) : ?>
+    <hr>
     <section class="tainacan-item-section tainacan-item-section--items-related-to-this">
         
         <?php if ($section_label != '') : ?>
